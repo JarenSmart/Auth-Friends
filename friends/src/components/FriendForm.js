@@ -3,6 +3,7 @@ import { axiosWithAuth } from "../util/axiosWithAuth";
 
 const FriendForm = () => {
   const [addFriend, setAddFriend] = useState({
+    id: Date.now(),
     name: "",
     age: "",
     email: "",
@@ -11,15 +12,15 @@ const FriendForm = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/api/friends", addFriend)
+      .post("/friends", addFriend)
       .then((res) => {
         console.log(res);
-        setAddFriend({ name: "", age: "", email: "" });
-      });
+      })
+      .catch((err) => console.log("Here is your error: ", err))
+      .finally(() => window.location.reload());
   };
 
   const changeHandler = (e) => {
-    e.preventDefault();
     setAddFriend({
       ...addFriend,
       [e.target.name]: e.target.value,

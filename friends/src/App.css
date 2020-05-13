@@ -36,3 +36,13 @@ input {
   background-color: #fff;
   font-size: 18px;
 }
+
+.friend-card,
+h3 {
+  margin: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding: 4px;
+  background: #2b171f;
+  color: #fff;
+}

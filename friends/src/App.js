@@ -16,7 +16,7 @@ function App() {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/protected">Protected Page</Link>
+            <Link to="/protected">Friend List</Link>
           </li>
         </ul>
         <h1>Auth With Friends</h1>

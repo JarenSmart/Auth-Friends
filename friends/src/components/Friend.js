@@ -5,10 +5,12 @@ const Friend = (props) => {
     <div className="new-friend-wrapper">
       {props.friend.map((newFriend) => {
         return (
-          <div>
-            <h3>{newFriend.name}</h3>
-            <h3>{newFriend.age}</h3>
-            <h3>{newFriend.email}</h3>
+          <div className="friend-wrapper">
+            <div className="friend-card">
+              <h3>Name: {newFriend.name}</h3>
+              <h3>Age: {newFriend.age}</h3>
+              <h3>E-Mail: {newFriend.email}</h3>
+            </div>
           </div>
         );
       })}
